@@ -606,25 +606,82 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .comparison-table {
-        font-size: 0.9rem;
-    }
-
-    .comparison-table th,
-    .comparison-table td {
-        padding: 0.75rem 0.5rem;
-    }
-
-    .btn-table {
-        padding: 0.5rem 1rem;
-        font-size: 0.9rem;
-    }
-
     .top-casinos-box h2 {
         font-size: 1.5rem;
     }
 
     .casino-list li {
         font-size: 0.9rem;
+    }
+
+    /* Mobile Stacked Table Layout */
+    .table-responsive {
+        overflow-x: visible;
+    }
+
+    .comparison-table thead {
+        display: none;
+    }
+
+    .comparison-table,
+    .comparison-table tbody,
+    .comparison-table tr {
+        display: block;
+        width: 100%;
+    }
+
+    .comparison-table tbody tr {
+        margin-bottom: 1.5rem;
+        border: 2px solid #FFD700;
+        border-radius: 10px;
+        padding: 1.5rem;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .comparison-table tbody tr:hover {
+        transform: none;
+        background-color: white;
+    }
+
+    .comparison-table td {
+        display: block;
+        width: 100%;
+        padding: 0.75rem 0;
+        border: none;
+        text-align: left;
+    }
+
+    .comparison-table td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #800020;
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .comparison-table td:first-child {
+        font-size: 1.2rem;
+        color: #800020;
+        margin-bottom: 0.5rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid #FFD700;
+    }
+
+    .comparison-table td:first-child::before {
+        display: none;
+    }
+
+    .comparison-table td:last-child {
+        padding-top: 1rem;
+    }
+
+    .btn-table {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+        text-align: center;
     }
 }
