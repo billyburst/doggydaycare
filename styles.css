@@ -37,6 +37,22 @@ header {
     width: auto;
 }
 
+.logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+}
+
+.logo-white {
+    color: white;
+}
+
+.logo-yellow {
+    color: #FFD700;
+    margin: 0 0.25rem;
+}
+
 nav ul {
     list-style: none;
     display: flex;
@@ -344,6 +360,57 @@ footer {
     color: #FFD700;
 }
 
+/* Meta Box Styles */
+.meta-box {
+    background: linear-gradient(135deg, #fff 0%, #f9f9f9 100%);
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 3px 15px rgba(128, 0, 32, 0.1);
+}
+
+.meta-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.meta-icon {
+    font-size: 1.5rem;
+}
+
+.meta-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.meta-label {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.meta-value {
+    font-size: 1.1rem;
+    color: #800020;
+    font-weight: bold;
+}
+
+.meta-divider {
+    width: 2px;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #FFD700, transparent);
+}
+
 /* Casino Specific Styles */
 .casino-intro,
 .casino-content {
@@ -434,11 +501,14 @@ footer {
 
 .comparison-table tbody tr {
     border-bottom: 1px solid #eee;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
 }
 
 .comparison-table tbody tr:hover {
     background-color: #fff9e6;
+    transform: scale(1.01);
+    box-shadow: 0 2px 8px rgba(128, 0, 32, 0.1);
 }
 
 .comparison-table tbody tr:last-child {
@@ -490,10 +560,29 @@ footer {
         text-align: center;
     }
 
+    .logo-text {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 0.5rem;
         margin-top: 1rem;
+    }
+
+    .meta-content {
+        gap: 1rem;
+    }
+
+    .meta-divider {
+        display: none;
+    }
+
+    .meta-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
     }
 
     .hero h1 {

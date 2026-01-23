@@ -10,7 +10,9 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="https://i.ibb.co/Wv6MNWS7/dog-walking-logo-ddt-3-burgandy.png" alt="Doggy Day Tours Logo" class="logo">
+            <div class="logo-text">
+                <span class="logo-white">Doggy</span><span class="logo-yellow">Day</span><span class="logo-white">Tours</span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -30,6 +32,26 @@
     </section>
 
     <main>
+        <section class="meta-box">
+            <div class="meta-content">
+                <div class="meta-item">
+                    <span class="meta-icon">✍️</span>
+                    <div class="meta-text">
+                        <span class="meta-label">Written by</span>
+                        <span class="meta-value">Bark Twain</span>
+                    </div>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-icon">📅</span>
+                    <div class="meta-text">
+                        <span class="meta-label">Last Updated</span>
+                        <span class="meta-value">January 23rd 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="casino-intro">
             <p>Looking for UK casino sites that put players first? The market right now has hundreds of options, and sorting the good from the bad takes time. Some sites deliver on their promises with solid no deposit bonuses, quick cashouts, and helpful support teams. Others look great on the surface but disappoint when it matters.</p>
 
@@ -273,5 +295,21 @@
             <p style="margin-top: 0.5rem; font-size: 0.9rem;">Please gamble responsibly. 18+ only.</p>
         </div>
     </footer>
+
+    <script>
+        // Make comparison table rows clickable
+        document.querySelectorAll('.comparison-table tbody tr').forEach(row => {
+            row.style.cursor = 'pointer';
+            row.addEventListener('click', function(e) {
+                // Don't trigger if clicking directly on the Visit Site button
+                if (!e.target.classList.contains('btn-table')) {
+                    const link = this.querySelector('.btn-table');
+                    if (link) {
+                        window.open(link.href, '_blank');
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 </html>
